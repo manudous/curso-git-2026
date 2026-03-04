@@ -45,5 +45,5 @@ Para entender Git, hay que dominar el ciclo de vida de un archivo:
 1. [Configuración de Usuario](./01-configuracion.md)
 2. [Creando un Repositorio Local y en GitHub](./02-creando-repo.md)
 3. [Setup HTTP Clásico (User/Pass)](./03-setup-http-clasico.md)
-4. [Módulo 2: Autenticación Moderna con Token](./04-setup-http-token.md)
-5. [Módulo 3: Conexión Profesional con SSH](./03-setup-ssh.md)
+4. [Autenticación Moderna con Token](./04-setup-http-token.md)
+5. [Conexión Profesional con SSH](./05-setup-ssh.md)

@@ -80,9 +80,7 @@ Ahora se nos abrirá un diálogo para introducir nuestro token:
 
 ![Diálogo de credenciales](./images/github-token-prompt.png)
 
-Lo introducimos en el campo de contraseña (el campo de usuario lo dejamos con nuestro nombre de usuario de GitHub) y hacemos push. Si todo va bien, el push se realizará correctamente.
-
-Y nos aparecerá el mensaje de éxito:
+Lo introducimos el token que hemos generado antes y hacemos click en "Sign in". Si el token es correcto, GitHub nos permitirá hacer push y veremos el mensaje de éxito en la terminal:
 
 ```bash
 Enumerating objects: 5, done.
