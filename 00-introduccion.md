@@ -42,6 +42,8 @@ Para entender Git, hay que dominar el ciclo de vida de un archivo:
 
 ## Índice del Curso
 
-1. [Módulo 1: Setup HTTP Clásico (User/Pass)](./01-setup-http-clasico.md)
-2. [Módulo 2: Autenticación Moderna con Token](./02-setup-http-token.md)
-3. [Módulo 3: Conexión Profesional con SSH](./03-setup-ssh.md)
+1. [Configuración de Usuario](./01-configuracion.md)
+2. [Creando un Repositorio Local y en GitHub](./02-creando-repo.md)
+3. [Setup HTTP Clásico (User/Pass)](./03-setup-http-clasico.md)
+4. [Módulo 2: Autenticación Moderna con Token](./04-setup-http-token.md)
+5. [Módulo 3: Conexión Profesional con SSH](./03-setup-ssh.md)
