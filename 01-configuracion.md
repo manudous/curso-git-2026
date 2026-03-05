@@ -26,11 +26,17 @@ git config --global user.name "Tu Nombre"
 git config --global user.email tu@email.com
 ```
 
-3. La rama por defecto a `main` (el estándar actual):
+3. La rama por defecto a `main`:
 
 ```bash
 git config --global init.defaultBranch main
 ```
+
+Esto merece una pequeña explicación. Git históricamente llamaba `master` a la rama principal por defecto. Pero en 2020, GitHub decidió cambiar el nombre por defecto de sus repositorios de `master` a `main`, para alejarse de una terminología con connotaciones históricas negativas. Con el tiempo, las versiones más modernas de Git en Mac y Linux también adoptaron `main` como predeterminado.
+
+El problema es que no todas las instalaciones se han actualizado por igual. En Windows, por ejemplo, el instalador oficial todavía puede crear la rama como `master`. Si eso pasa, cuando intentes sincronizar tu repositorio local con GitHub tendrás una rama `master` en local y una `main` en remoto, y Git no las reconoce como la misma rama.
+
+Con este comando te aseguras de que siempre se use `main`, independientemente de la versión o el sistema operativo. Así no hay sorpresas.
 
 Una vez hecho esto, para comprobar que todo ha quedado bien guardado, ejecuta:
 
