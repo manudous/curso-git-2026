@@ -1,10 +1,12 @@
-# Creando un repositorio desde cero
+# Curso: Dominando Git y la Conexión con la Nube
 
 <img src="./images/logo.png" width="120px">
 
 <div style="page-break-before:always"></div>
 
-Vamos a empezar desde lo más básico: crear un repositorio Git en local, sin depender de nada en remoto.
+## Introducción
+
+Ya tienes Git instalado y configurado. Ahora toca lo interesante: crear tu primer repositorio. Vamos a hacerlo en dos pasos: primero en tu máquina, en local, y luego lo conectamos con GitHub para tener una copia en la nube.
 
 ## Creando el proyecto en local
 
@@ -23,7 +25,7 @@ git init
 
 ![git init](./images/git-init.png)
 
-Con esto Git crea la carpeta oculta `.git` dentro del proyecto, que es donde vive toda la base de datos del repositorio (commits, ramas, configuración...).
+Con esto Git crea la carpeta oculta `.git` dentro del proyecto, que es donde vive toda la base de datos del repositorio: commits, ramas, configuración...
 
 ## Añadiendo los primeros ficheros
 
@@ -96,21 +98,18 @@ Ya tenemos un repositorio local con su primer commit.
 
 ## Creando el repositorio en GitHub
 
-Ahora queremos tener una copia del repositorio en _GitHub_ para poder sincronizar los cambios desde cualquier máquina.
+Ahora queremos tener una copia del repositorio en GitHub para poder sincronizar los cambios desde cualquier máquina.
 
-Entramos en [github.com](https://github.com), iniciamos sesión.
-
-- Creamos un repositorio nuevo.
+Entramos en [github.com](https://github.com), iniciamos sesión y creamos un repositorio nuevo.
 
 ![Creando un nuevo repositorio en GitHub](./images/github-new-repo.png)
 
 - Nombre del repositorio: `mi-proyecto` (o el que prefieras).
-- Lo dejamos **vacío**: sin README, sin `.gitignore`, sin licencia.
-  Así evitamos conflictos al sincronizarlo con nuestro repo local.
+- Lo dejamos **vacío**: sin README, sin `.gitignore`, sin licencia. Así evitamos conflictos al sincronizarlo con nuestro repo local.
 
 ![Configurando el nuevo repositorio en GitHub](./images/github-config-repo.png)
 
-- Creamos el repositorio.
+Creamos el repositorio.
 
 ![Repositorio creado en GitHub](./images/github-repo-created.png)
 
@@ -118,4 +117,10 @@ Una vez creado, GitHub nos muestra la URL del repositorio. La necesitaremos en e
 
 ![URL del repositorio en GitHub](./images/github-repo-url.png)
 
-> En los siguientes apartados veremos cómo autenticarnos y sincronizar el repositorio usando HTTP con token o SSH.
+---
+
+Ya tenemos el repositorio en local y en GitHub. Lo que nos falta es conectarlos. En los siguientes vídeos veremos cómo autenticarnos usando HTTP con token o SSH, y cómo subir los cambios.
+
+Nos vemos ahí.
+
+---
