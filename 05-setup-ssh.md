@@ -40,6 +40,8 @@ El comando te hará tres preguntas:
 - **Ruta donde guardar la llave:** pulsa Enter para aceptar la ruta por defecto (`~/.ssh/id_ed25519`).
 - **Passphrase:** una contraseña opcional para proteger la llave privada. Puedes dejarla vacía pulsando Enter dos veces.
 
+![Interacción del comando ssh-keygen en la terminal](./images/ssh-keygen-output.png)
+
 ### 3. Arranca el agente SSH y añade la llave
 
 El agente SSH es un proceso que gestiona tus llaves en memoria para no tener que reintroducir la passphrase en cada operación:
@@ -106,7 +108,9 @@ Comprueba que todo funciona antes de hacer el primer push:
 ssh -T git@github.com
 ```
 
-Si es la primera vez, SSH te preguntará si confías en el host de GitHub. Escribe `yes` y pulsa Enter.
+Si es la primera vez que te conectas a GitHub por SSH, verás un mensaje como este preguntando si confías en el servidor. Es normal, no es un error. Escribe `yes` y pulsa Enter.
+
+![Warning de autenticidad del host al conectar por SSH por primera vez](./images/ssh-host-warning.png)
 
 La respuesta correcta es:
 

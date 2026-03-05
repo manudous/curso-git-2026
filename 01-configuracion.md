@@ -4,28 +4,34 @@
 
 <div style="page-break-before:always"></div>
 
-Es importante antes de comenzar establecer tu nombre de usuario y dirección de correo electrónico, ya que en los _"commits"_ que realicemos se guardará dicha información.
+Antes de empezar a trabajar con Git, hay que decirle quién eres. Cada vez que hagas un commit, Git va a guardar tu nombre y tu email junto al cambio. Así cualquier miembro del equipo sabe quién hizo qué.
 
-1. Configurar tu nombre de usuario en _Git_:
+Son tres comandos que solo ejecutas una vez:
 
-```bash
-$ git config --global user.name "Nombre prueba"
-```
-
-2. Configurar tu dirección de correo electrónico:
+1. Tu nombre de usuario:
 
 ```bash
-$ git config --global user.email prueba@ejemplo.com
+git config --global user.name "Tu Nombre"
 ```
 
-4. Configurar la rama por defecto a `main`:
+2. Tu dirección de correo:
 
 ```bash
-$ git config --global init.defaultBranch main
+git config --global user.email tu@email.com
 ```
 
-Si quieres comprobar tu configuración, puedes usar el comando:
+3. La rama por defecto a `main` (el estándar actual):
 
 ```bash
-$ git config --list
+git config --global init.defaultBranch main
 ```
+
+Para comprobar que todo ha quedado bien guardado:
+
+```bash
+git config --list
+```
+
+![Salida de git config --list](./images/git-config-list.png)
+
+Con esto ya tienes Git configurado y listo. En el siguiente vídeo vamos a crear nuestro primer repositorio.

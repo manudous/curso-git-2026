@@ -4,49 +4,38 @@
 
 <div style="page-break-before:always"></div>
 
-El método de _"Usuario y Contraseña"_ por HTTPS fue el estándar durante años por su sencillez, pero hoy es una técnica del pasado.
+Durante años, la forma de conectar con GitHub por HTTPS era simple: te pedía tu usuario y tu contraseña de GitHub, los metías, y listo. Tan sencillo que casi todo el mundo empezaba por aquí.
 
-## El concepto
+El problema es que esa sencillez tenía un coste de seguridad alto: cualquier persona que consiguiera tu contraseña tenía acceso total a tu cuenta, sin límites. No había forma de dar acceso parcial ni de revocar el acceso a un dispositivo concreto sin cambiar la contraseña de toda la cuenta.
 
-Al conectar con GitHub por HTTPS, Git solicitaba las credenciales de tu cuenta en cada operación de escritura. Esto tenía varios problemas:
-
-- Vulnerable a ataques de fuerza bruta.
-- No permite gestionar permisos de forma granular.
-- Cualquier persona con tu contraseña tiene acceso total a tu cuenta.
-
-## La evidencia histórica
-
-Desde el **13 de agosto de 2021**, GitHub bloqueó oficialmente el uso de contraseñas de cuenta para todas las operaciones de Git.
+Por eso **desde el 13 de agosto de 2021**, GitHub bloqueó oficialmente este método para siempre.
 
 > **Fuente oficial:** [GitHub Blog - Support for password authentication was removed](https://github.blog/changelog/2021-08-12-git-password-authentication-is-shutting-down)
 
 ## Reproduciendo el error
 
-Partimos del repositorio local que creamos en el paso anterior (`mi-proyecto`) y del repositorio vacío que ya creamos en GitHub.
-
-### 1. Vinculamos el repo local con el remoto
+Partimos del repositorio local `mi-proyecto` con el remote ya configurado. Si no lo tienes aún, añádelo:
 
 ```bash
 git remote add origin https://github.com/tu-usuario/mi-proyecto.git
 ```
 
-### 2. Intentamos hacer push metiendo las credenciales en la URL
-
-La forma más directa de forzar el método clásico es incluir usuario y contraseña directamente en la URL. Así evitamos que el gestor de credenciales del sistema interfiera:
+Ahora intentamos hacer push con nuestras credenciales de GitHub:
 
 ```bash
-git push https://tu-usuario:tu-contraseña@github.com/tu-usuario/mi-proyecto.git main
+git push origin main
 ```
 
-> Sustituye `tu-usuario` y `tu-contraseña` por los datos reales de tu cuenta de GitHub.
+El sistema abre el diálogo de credenciales. Introducimos usuario y contraseña de GitHub y aceptamos.
 
-### 3. El error
-
-GitHub rechaza la operación y devuelve este mensaje:
+GitHub rechaza la operación con este error:
 
 ```bash
-remote: Invalid username or token. Password authentication is not supported for Git operations.
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
 fatal: Authentication failed for 'https://github.com/tu-usuario/mi-proyecto.git/'
 ```
 
-Queda demostrado que este método ya no funciona. Por eso necesitamos métodos de autenticación modernos: **token HTTP** o **SSH**, que veremos en los siguientes apartados.
+![Error de autenticación en la terminal](./images/http-auth-error.png)
+
+El método ya no funciona. La buena noticia es que los métodos modernos son igual de fáciles de configurar y mucho más seguros. En los siguientes vídeos vemos los dos que sí funcionan hoy: **token HTTP** y **SSH**.

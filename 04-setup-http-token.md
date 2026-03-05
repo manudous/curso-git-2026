@@ -54,7 +54,7 @@ Haz clic en **Generate token**. GitHub te mostrará el token **una sola vez**. C
 
 ![Token generado, copiar antes de salir](./images/github-token-copy.png)
 
-¡Vamos a probarlo!, antes de nada, asegúrate que borramos todos los credenciales que tenemos configurardos para GiHub. En Windows, abre el "Administrador de credenciales" y borra cualquier entrada relacionada con GitHub. En Mac, abre "Acceso a Llaveros" y haz lo mismo.
+¡Vamos a probarlo! Antes de nada, borra las credenciales que puedas tener guardadas de GitHub para que el sistema te las vuelva a pedir y puedas introducir el token. En Windows, abre el **Administrador de credenciales** y elimina cualquier entrada relacionada con GitHub. En Mac, abre **Acceso a Llaveros** y haz lo mismo.
 
 ![Administrador de credenciales de Windows](./images/windows-credential-manager.png)
 
@@ -80,7 +80,7 @@ Ahora se nos abrirá un diálogo para introducir nuestro token:
 
 ![Diálogo de credenciales](./images/github-token-prompt.png)
 
-Lo introducimos el token que hemos generado antes y hacemos click en "Sign in". Si el token es correcto, GitHub nos permitirá hacer push y veremos el mensaje de éxito en la terminal:
+Introducimos el token que hemos generado antes y hacemos clic en **Sign in**. Si el token es correcto, GitHub nos permitirá hacer push y veremos el mensaje de éxito en la terminal:
 
 ```bash
 Enumerating objects: 5, done.
