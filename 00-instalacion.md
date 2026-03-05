@@ -22,27 +22,11 @@ Ahí verás un botón de descarga que ya detecta automáticamente tu sistema ope
 
 Si estás en **Windows**, ejecuta el instalador que acabas de descargar. Te va a hacer varias preguntas durante la instalación. **Mi recomendación**: deja todas las opciones por defecto y pulsa _Next_ hasta el final. No necesitas cambiar nada.
 
-Al terminar, abre la aplicación **Git Bash** que el instalador habrá dejado en tu sistema. Es una terminal que usaremos durante todo el curso.
-
-![Git Bash](./images/git-bash.png)
-
-Si estás en **Mac**, la forma más sencilla es instalar las **Xcode Command Line Tools**. Abre el Terminal y escribe:
-
-```
-xcode-select --install
-```
-
-Acepta la ventana que aparece y espera a que termine. Cuando acabe, Git ya estará disponible.
-
-Si prefieres tener la versión más reciente de Git, puedes instalarlo también a través de **Homebrew** con:
+Si estás en **Mac**, la forma más sencilla es instalar las **Homebrew**. Abre el Terminal y escribe:
 
 ```
 brew install git
 ```
-
----
-
-_[PANTALLA – Linux]_
 
 Si estás en **Linux**, usa el gestor de paquetes de tu distribución. En Ubuntu o Debian:
 
@@ -56,10 +40,6 @@ En Fedora o RHEL:
 sudo dnf install git
 ```
 
----
-
-_[CÁMARA + PANTALLA]_
-
 Una vez instalado, para comprobar que todo ha ido bien, abre tu terminal y escribe:
 
 ```
@@ -68,9 +48,11 @@ git --version
 
 Si te devuelve un número de versión, perfecto. Git está instalado y listo.
 
----
+```bash
+git version 2.53.0.windows.1
+```
 
-_[CÁMARA]_
+---
 
 Con esto ya tienes Git en tu máquina. En el siguiente vídeo configuramos Git con tu nombre y tu correo para que queden registrados en cada cambio que hagas.
 
