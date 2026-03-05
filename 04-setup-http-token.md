@@ -1,44 +1,40 @@
-# Setup HTTP: Personal Access Token (PAT)
+# Curso: Dominando Git y la Conexión con la Nube
 
 <img src="./images/logo.png" width="120px">
 
 <div style="page-break-before:always"></div>
 
-Las contraseñas de cuenta quedaron bloqueadas en 2021. La alternativa más sencilla por HTTPS son los **Personal Access Tokens (PAT)**: contraseñas técnicas generadas por GitHub con permisos y caducidad controlados.
+## Introducción
+
+En el vídeo anterior vimos que las contraseñas de GitHub ya no funcionan para autenticarse desde la terminal. La alternativa más sencilla por HTTPS son los **Personal Access Tokens**, o PAT. Son básicamente contraseñas técnicas que genera GitHub, con permisos y caducidad que tú controlas.
+
+Vamos a ver cómo generarlo y cómo usarlo.
 
 ## ¿Qué ventajas tiene un token frente a una contraseña?
 
+Antes de ponernos manos a la obra, merece la pena entender por qué esto es mejor:
+
 - **Scope limitado:** puedes darle permisos solo para repositorios, sin acceso al resto de tu cuenta.
 - **Caducidad:** se puede configurar para que expire automáticamente.
-- **Revocable:** si se compromete, lo borras y generas uno nuevo sin tocar tu contraseña.
+- **Revocable:** si se compromete, lo borras y generas uno nuevo sin tocar tu contraseña principal.
 
 ## Generando el token en GitHub
 
-### 1. Accede a la configuración de tu cuenta
-
-Entra en [github.com](https://github.com), haz clic en tu avatar (arriba a la derecha) y selecciona **Settings**.
+Entra en [github.com](https://github.com), haz clic en tu avatar arriba a la derecha y selecciona **Settings**.
 
 ![Menú de usuario en GitHub](./images/github-settings-menu.png)
-
-### 2. Developer settings
 
 Baja hasta el final del menú lateral izquierdo y haz clic en **Developer settings**.
 
 ![Developer settings en el menú lateral](./images/github-developer-settings.png)
 
-### 3. Personal access tokens
-
 En el menú izquierdo selecciona **Personal access tokens** > **Tokens (classic)**.
 
 ![Sección Personal access tokens](./images/github-pat-menu.png)
 
-### 4. Genera un token nuevo
-
 Haz clic en **Generate new token** > **Generate new token (classic)**.
 
 ![Botón Generate new token](./images/github-generate-token.png)
-
-### 5. Configura el token
 
 Rellena los campos:
 
@@ -48,39 +44,41 @@ Rellena los campos:
 
 ![Configuración del token: nombre, expiración y scopes](./images/github-token-config.png)
 
-### 6. Copia el token
-
 Haz clic en **Generate token**. GitHub te mostrará el token **una sola vez**. Cópialo ahora porque no volverás a verlo.
 
 ![Token generado, copiar antes de salir](./images/github-token-copy.png)
 
-¡Vamos a probarlo! Antes de nada, borra las credenciales que puedas tener guardadas de GitHub para que el sistema te las vuelva a pedir y puedas introducir el token. En Windows, abre el **Administrador de credenciales** y elimina cualquier entrada relacionada con GitHub. En Mac, abre **Acceso a Llaveros** y haz lo mismo.
+## Limpiando las credenciales anteriores
+
+Antes de probarlo, tenemos que borrar las credenciales que puedas tener guardadas de GitHub. Si no lo hacemos, el sistema usará las antiguas y no te pedirá el token.
+
+En **Windows**, abre el **Administrador de credenciales** y elimina cualquier entrada relacionada con GitHub.
 
 ![Administrador de credenciales de Windows](./images/windows-credential-manager.png)
 
-Y elimina cualquier entrada relacionada con GitHub.
-
 ![Eliminar credenciales de GitHub](./images/delete-github-credential.png)
+
+En **Mac**, abre **Acceso a Llaveros** y haz lo mismo.
 
 ## Usando el token para hacer push
 
-Partimos del repositorio local `mi-proyecto` que ya tiene el remote configurado. Si no lo tienes aún, añádelo:
+Partimos del repositorio `mi-proyecto` con el remote ya configurado. Si no lo tienes, añádelo:
 
 ```bash
 git remote add origin https://github.com/tu-usuario/mi-proyecto.git
 ```
 
-Ahora hacemos push. Git nos pedirá credenciales:
+Hacemos push:
 
 ```bash
 git push origin main
 ```
 
-Ahora se nos abrirá un diálogo para introducir nuestro token:
+Se abrirá un diálogo para introducir las credenciales.
 
 ![Diálogo de credenciales](./images/github-token-prompt.png)
 
-Introducimos el token que hemos generado antes y hacemos clic en **Sign in**. Si el token es correcto, GitHub nos permitirá hacer push y veremos el mensaje de éxito en la terminal:
+Introducimos el token que acabamos de generar y hacemos clic en **Sign in**. Si todo está bien, veremos el mensaje de éxito en la terminal:
 
 ```bash
 Enumerating objects: 5, done.
@@ -90,6 +88,16 @@ Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 289 bytes | 289.00 KiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To https://github.com/manudous/mi-proyecto.git
+To https://github.com/tu-usuario/mi-proyecto.git
    871fcff..7013a5f  main -> main
 ```
+
+El repositorio local ya está sincronizado con GitHub.
+
+---
+
+Este método funciona y es sencillo, pero tiene una pega: el token caduca y tienes que renovarlo. Si buscas algo más cómodo y profesional, el siguiente vídeo es para ti: vamos a ver cómo conectar con SSH, que una vez configurado no te vuelve a pedir nada.
+
+Nos vemos ahí.
+
+---
