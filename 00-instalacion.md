@@ -14,17 +14,17 @@ Pero antes de nada, necesitas tener Git instalado en tu máquina. Eso es lo que 
 
 Abre el navegador y ve a la página oficial de Git:
 
-[Insatalar Git](https://git-scm.com/install/)
+[Insatalar Git](https://git-scm.com/)
 
 Ahí verás un botón de descarga que ya detecta automáticamente tu sistema operativo. Haz clic y descarga el instalador.
 
-_[PANTALLA – Windows]_
+![Descargar Git](./images/download-git-windows.png)
 
-Si estás en **Windows**, ejecuta el instalador que acabas de descargar. Te va a hacer varias preguntas durante la instalación. Mi recomendación: deja todas las opciones por defecto y pulsa _Next_ hasta el final. No necesitas cambiar nada.
+Si estás en **Windows**, ejecuta el instalador que acabas de descargar. Te va a hacer varias preguntas durante la instalación. **Mi recomendación**: deja todas las opciones por defecto y pulsa _Next_ hasta el final. No necesitas cambiar nada.
 
 Al terminar, abre la aplicación **Git Bash** que el instalador habrá dejado en tu sistema. Es una terminal que usaremos durante todo el curso.
 
-_[PANTALLA – macOS]_
+![Git Bash](./images/git-bash.png)
 
 Si estás en **Mac**, la forma más sencilla es instalar las **Xcode Command Line Tools**. Abre el Terminal y escribe:
 
